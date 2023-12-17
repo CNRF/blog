@@ -39,6 +39,13 @@ const config = defineConfig({
       pattern: 'https://github.com/CNRF/blog/edit/master/docs/:path',
       text: '在GitHub上编辑此页',
     },
+    lastUpdated: {
+      text: '最近更新时间',
+      formatOptions: {
+        dateStyle: 'short',
+        timeStyle: 'medium',
+      },
+    },
     darkModeSwitchLabel: '主题',
     sidebarMenuLabel: '菜单',
     returnToTopLabel: '回到顶部',
