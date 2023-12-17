@@ -7,6 +7,8 @@ import { useData } from 'vitepress'
 // @ts-ignore
 import MNavLinks from './components/MNavLinks.vue'
 import './styles/index.scss'
+// @ts-ignore
+import Layout from './components/Layout.vue'
 
 if (typeof window !== 'undefined') {
   /* 注销 PWA 服务 */
@@ -42,7 +44,7 @@ export default {
       props.class = frontmatter.value.layoutClass
     }
 
-    return h(DefaultTheme.Layout, props, {
+    return h(Layout, props, {
       // https://vitepress.dev/guide/extending-default-theme#layout-slots
     })
   },
