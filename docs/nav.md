@@ -1,7 +1,7 @@
 ---
 description: 实用网站
 layoutClass: m-nav-layout
-outline: [2, 3, 4,5]
+outline: [2, 3, 4, 5]
 ---
 
 <script setup>

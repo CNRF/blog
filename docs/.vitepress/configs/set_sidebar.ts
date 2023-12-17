@@ -31,6 +31,9 @@ function getList(params: any[], path1: string, pathname: string, rootPath: strin
         if (isDir) {
             // 如果是文件夹,读取之后作为下一次递归参数
             const files = fs.readdirSync(dir)
+            if (params[file] === 'assets') {
+                continue
+            }
             res.push({
                 text: params[file],
                 collapsed: false,

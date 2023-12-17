@@ -42,9 +42,9 @@ const formatBadge = computed(() => {
           <div v-if="svg" class="icon" v-html="svg"></div>
           <div v-else-if="icon && typeof icon === 'string'" class="icon">
             <img
-                :src="withBase(icon)"
-                :alt="title"
-                onerror="this.parentElement.style.display='none'"
+              :src="withBase(icon)"
+              :alt="title"
+              onerror="this.parentElement.style.display='none'"
             />
           </div>
         </template>

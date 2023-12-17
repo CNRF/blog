@@ -1,11 +1,11 @@
 // https://vitepress.dev/guide/custom-theme
 import { h, watch } from 'vue'
-import type {EnhanceAppContext, Theme} from 'vitepress'
+import type { EnhanceAppContext, Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 // @ts-ignore
-import {useData} from "vitepress";
+import { useData } from 'vitepress'
 // @ts-ignore
-import MNavLinks from "./components/MNavLinks.vue";
+import MNavLinks from './components/MNavLinks.vue'
 import './styles/index.scss'
 
 if (typeof window !== 'undefined') {
@@ -22,9 +22,9 @@ if (typeof window !== 'undefined') {
   if ('caches' in window) {
     caches.keys().then(function (keyList) {
       return Promise.all(
-          keyList.map(function (key) {
-            return caches.delete(key)
-          })
+        keyList.map(function (key) {
+          return caches.delete(key)
+        }),
       )
     })
   }
@@ -51,14 +51,13 @@ export default {
     app.provide('DEV', process.env.NODE_ENV === 'development')
     if (typeof window !== 'undefined') {
       watch(
-          () => router.route.data.relativePath,
-          () => updateHomePageStyle(location.pathname === '/'),
-          { immediate: true }
+        () => router.route.data.relativePath,
+        () => updateHomePageStyle(location.pathname === '/'),
+        { immediate: true },
       )
     }
-  }
+  },
 } satisfies Theme
-
 
 function updateHomePageStyle(value: boolean) {
   if (value) {

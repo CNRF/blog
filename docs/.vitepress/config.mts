@@ -1,8 +1,8 @@
-import {defineConfig} from 'vitepress'
-
+import { defineConfig } from 'vitepress'
 import mdFootnote from 'markdown-it-footnote'
 import mdTaskList from 'markdown-it-task-lists'
-import {nav, set_sidebar} from './configs'
+import { nav, set_sidebar } from './configs'
+// @ts-ignore
 const config = defineConfig({
   outDir: '../dist',
   base: process.env.APP_BASE_PATH || '/',
@@ -37,7 +37,7 @@ const config = defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     editLink: {
       pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path',
-      text: '在GitHub上编辑此页'
+      text: '在GitHub上编辑此页',
     },
     darkModeSwitchLabel: '主题',
     sidebarMenuLabel: '菜单',
@@ -53,7 +53,12 @@ const config = defineConfig({
       next: '下一篇',
     },
     nav,
-    sidebar: set_sidebar('/docs'),
+    sidebar: {
+      '/': { base: '/', items: set_sidebar('/docs/') },
+      '/java/basic': { base: '/java/basic', items: set_sidebar('/docs/java/basic') },
+      '/linux/': { base: '/linux/', items: set_sidebar('/docs/linux/') },
+      '/workflow/': { base: '/workflow/', items: set_sidebar('/docs/workflow/') },
+    },
     // 开启本地搜索
     search: {
       provider: 'local',
@@ -76,12 +81,11 @@ const config = defineConfig({
     },
     // 配置详情页跳转位置
     socialLinks: [{ icon: 'github', link: 'https://github.com/CNRF' }],
-    // 配置页脚
+    // 配置首页页脚
     footer: {
       message: 'Released under the MIT License.',
       copyright: 'Copyright © 2023-present mark',
     },
-
   },
 })
 export default config
