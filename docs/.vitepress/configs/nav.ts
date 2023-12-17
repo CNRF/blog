@@ -1,12 +1,19 @@
 import type { DefaultTheme } from 'vitepress'
 
+// @ts-ignore
 export const nav: DefaultTheme.Config['nav'] = [
   {
     text: '编程语言',
     items: [
       {
-        text: '后端',
-        items: [{ text: 'Java', link: '/java/basic/01.introduction' }],
+        text: 'java基础',
+        link: '/java/base/01.基础知识',
+        activeMatch: '^/java/base',
+      },
+      {
+        text: 'spring',
+        link: '/java/spring/01.源码编译',
+        activeMatch: '^/linux/spring',
       },
     ],
     activeMatch: '^/java',

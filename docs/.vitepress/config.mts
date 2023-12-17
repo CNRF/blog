@@ -54,8 +54,7 @@ const config = defineConfig({
     },
     nav,
     sidebar: {
-      '/': { base: '/', items: set_sidebar('/docs/') },
-      '/java/basic': { base: '/java/basic', items: set_sidebar('/docs/java/basic') },
+      '/java/': { base: '/java/', items: set_sidebar('/docs/java/') },
       '/linux/': { base: '/linux/', items: set_sidebar('/docs/linux/') },
       '/workflow/': { base: '/workflow/', items: set_sidebar('/docs/workflow/') },
     },
