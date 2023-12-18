@@ -4,7 +4,8 @@ import mdTaskList from 'markdown-it-task-lists'
 import { nav, set_sidebar } from './configs'
 // @ts-ignore
 const config = defineConfig({
-  base:  '/blog',
+  outDir: '../dist',
+  base: process.env.APP_BASE_PATH || '/blog',
 
   title: '星的路',
   description: '笔记',
