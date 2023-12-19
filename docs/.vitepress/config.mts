@@ -39,6 +39,7 @@ const config = defineConfig({
       pattern: 'https://github.com/CNRF/blog/edit/master/docs/:path',
       text: '在GitHub上编辑此页',
     },
+    logo: '/logo.png',
     lastUpdated: {
       text: '最近更新时间',
       formatOptions: {
