@@ -1,12 +1,12 @@
 import { defineConfig } from 'vitepress'
 import mdFootnote from 'markdown-it-footnote'
 import mdTaskList from 'markdown-it-task-lists'
-import { nav, set_sidebar } from './configs'
+import {head, nav, set_sidebar } from './configs'
 // @ts-ignore
 const config = defineConfig({
   outDir: '../dist',
   base:  '/blog/',
-
+  head,
   title: '星的路',
   description: '笔记',
   lang: 'zh-CN',
