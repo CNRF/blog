@@ -56,6 +56,6 @@ jobs:
           # 指定仓库
           REPOSITORY_NAME: CNRF/blog
           # GitHub Pages 读取的分支
-          BRANCH: master
+          BRANCH: github-pages
           # 静态文件所在目录
-          FOLDER: dist
+          FOLDER: docs/.vitepress/dist
