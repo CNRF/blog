@@ -5,7 +5,7 @@ import {head, nav, set_sidebar } from './configs'
 // @ts-ignore
 const config = defineConfig({
   outDir: '../dist',
-  base:  '/',
+  base:  '/blog/',
   head,
   title: '星的路',
   description: '笔记',
