@@ -64,6 +64,7 @@ const config = defineConfig({
     sidebar: {
       '/java/': { base: '/java/', items: set_sidebar('/docs/java/') },
       '/linux/': { base: '/linux/', items: set_sidebar('/docs/linux/') },
+      '/windows/': { base: '/windows/', items: set_sidebar('/docs/windows/') },
       '/workflow/': { base: '/workflow/', items: set_sidebar('/docs/workflow/') },
     },
     // 开启本地搜索

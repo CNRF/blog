@@ -18,22 +18,34 @@ export const nav: DefaultTheme.Config['nav'] = [
     ],
     activeMatch: '^/java',
   },
-  {
-    text: 'linux',
-    items: [
-      {
-        text: 'corn',
-        link: '/linux/corn/01.corn安装及使用',
-        activeMatch: '^/linux/corn',
-      },
-      {
-        text: 'docker',
-        link: '/linux/docker/01.docker安装',
-        activeMatch: '^/linux/docker',
-      },
-    ],
-    activeMatch: '^/linux',
-  },
+
+    {
+        text: '系统命令',
+        items: [
+            {
+                text: 'windows',
+                link: '/windows/01.windows操作系统查看端口占用',
+                activeMatch: '^/windows',
+            },
+            {
+                text: 'linux',
+                items: [
+                    {
+                        text: 'corn',
+                        link: '/linux/corn/01.corn安装及使用',
+                        activeMatch: '^/linux/corn',
+                    },
+                    {
+                        text: 'docker',
+                        link: '/linux/docker/01.docker安装',
+                        activeMatch: '^/linux/docker',
+                    },
+                ],
+                activeMatch: '^/linux',
+            }
+        ],
+        activeMatch: '^/(linux|windows)',
+    },
   {
     text: 'workflow',
     items: [
