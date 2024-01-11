@@ -8,7 +8,7 @@ hero:
   tagline: 知识是进步的阶梯，争取每天都有知识点更新
   actions:
     - text: java物语
-      link: /java/base/01.基础知识
+      link: /java/java基础/01.基础知识
     - text: 实用网站
       link: /nav
       theme: alt
@@ -16,7 +16,7 @@ features:
   - icon: 📖
     title: java后端相关
     details: 整理java后端相关知识点<small>（面试八股文）</small><br />如有异议按你的理解为主，不接受反驳
-    link: /java/base/01.基础知识
+    link: /java/java基础/01.基础知识
     linkText: java后端相关
   - icon: 💯
     title: 吾志所向，一往无前。

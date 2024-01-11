@@ -7,8 +7,8 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       {
         text: 'java基础',
-        link: '/java/base/01.基础知识',
-        activeMatch: '^/java/base',
+        link: '/java/java基础/01.基础知识',
+        activeMatch: '^/java/java基础',
       },
       {
         text: 'spring',
