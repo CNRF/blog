@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mysql:
+    image: nacos/nacos-server:2.0.2
+    # docker启动时自动启动
+    restart: always
+    # 容器名称
+    container_name: nacos
+    # 环境变量
+    environment:
+      MODE: standalone
+    # 端口映射
+    ports:
+      - "8848:8848"
+    # 数据卷（相关文件夹需要提前建）
+    volumes:
+      - /mnt/nacos/custom.properties:/home/nacos/init.d/custom.properties
+      - /mnt/nacos/logs:/home/nacos/logs

@@ -1,0 +1,18 @@
+version: '3'
+services:
+  mysql:
+    image: redis:7.0.9
+    # docker启动时自动启动
+    restart: always
+    # 容器名称
+    container_name: redis
+
+    # 端口映射
+    ports:
+      - "6379:6379"
+    # 数据卷（相关文件夹需要提前建）
+    volumes:
+      - /mnt/redis/redis.conf:/etc/redis/redis.conf
+      - /mnt/redis/data:/data
+    # 指定配置文件启动
+    command: redis-server /etc/redis/redis.conf

@@ -1,0 +1,22 @@
+version: '3'
+services:
+  mysql:
+    image: minio/minio:RELEASE.2024-01-31T20-20-33Z.fips
+    # docker启动时自动启动
+    restart: always
+    # 容器名称
+    container_name: minio
+    # 环境变量
+    environment:
+      MINIO_ROOT_USER: admin
+      MINIO_ROOT_PASSWORD: admin123456
+      MINIO_SERVER_URL: http://192.168.232.129:9000
+    # 端口映射
+    ports:
+      - "9000:9000"
+      - "9090:9090"
+    # 数据卷（相关文件夹需要提前建）
+    volumes:
+      - /mnt/minio/data:/data
+    # 指定配置文件启动
+    command:  server /data --console-address ":9090" --address ":9000"
