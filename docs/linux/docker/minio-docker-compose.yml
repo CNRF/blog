@@ -1,6 +1,6 @@
 version: '3'
 services:
-  mysql:
+  minio:
     image: minio/minio:RELEASE.2024-01-31T20-20-33Z.fips
     # docker启动时自动启动
     restart: always

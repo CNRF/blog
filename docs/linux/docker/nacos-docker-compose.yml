@@ -1,6 +1,6 @@
 version: '3'
 services:
-  mysql:
+  nacos:
     image: nacos/nacos-server:2.0.2
     # docker启动时自动启动
     restart: always
