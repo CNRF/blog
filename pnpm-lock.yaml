@@ -14,6 +14,9 @@ dependencies:
   markdown-it-task-lists:
     specifier: ^2.1.1
     version: 2.1.1
+  medium-zoom:
+    specifier: ^1.1.0
+    version: 1.1.0
   vite-plugin-vitepress-auto-sidebar:
     specifier: ^1.6.1
     version: 1.6.1(eslint@8.56.0)(typescript@5.3.3)(vite@4.5.1)(vitepress@1.0.0-rc.32)
@@ -1950,6 +1953,10 @@ packages:
   /mdurl@1.0.1:
     resolution: {integrity: sha512-/sKlQJCBYVY9Ers9hqzKou4H6V5UWc/M59TH2dvkt+84itfnq7uFOMLpOiOS4ujvHP4etln18fmIxA5R5fll0g==}
     dev: true
+
+  /medium-zoom@1.1.0:
+    resolution: {integrity: sha512-ewyDsp7k4InCUp3jRmwHBRFGyjBimKps/AJLjRSox+2q/2H4p/PNpQf+pwONWlJiOudkBXtbdmVbFjqyybfTmQ==}
+    dev: false
 
   /mensch@0.3.4:
     resolution: {integrity: sha512-IAeFvcOnV9V0Yk+bFhYR07O3yNina9ANIN5MoXBKYJ/RLYPurd2d0yw14MDhpr9/momp0WofT1bPUh3hkzdi/g==}
