@@ -71,5 +71,7 @@ export const set_sidebar = (pathname: string) => {
     const files = fs.readdirSync(dirPath)
     // 过滤掉
     const items = intersections(files, WHITE_LIST)
-    return getList(items, dirPath, pathname, pathname)
+     var list = getList(items, dirPath, pathname, pathname);
+    console.log(list)
+    return list;
 }

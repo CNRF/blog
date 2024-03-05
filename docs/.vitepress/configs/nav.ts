@@ -5,18 +5,34 @@ export const nav: DefaultTheme.Config['nav'] = [
   {
     text: '编程语言',
     items: [
-      {
-        text: 'java基础',
-        link: '/java/java基础/01.基础知识',
-        activeMatch: '^/java/java基础',
-      },
-      {
-        text: 'spring',
-        link: '/java/spring/01.源码编译',
-        activeMatch: '^/linux/spring',
-      },
+        {
+            text: 'java',
+            items: [
+                {
+                    text: 'java基础',
+                    link: '/java/java基础/01.基础知识',
+                    activeMatch: '^/java/java基础',
+                },
+                {
+                    text: 'spring',
+                    link: '/java/spring/01.源码编译',
+                    activeMatch: '^/linux/spring',
+                },
+            ],
+            activeMatch: '^/java',
+        },
+        {
+            text:'前端',
+            items: [
+                {
+                    text: 'html',
+                    link: '/web/html/01.HTML标签-排序标签',
+                    activeMatch: '^/web/html',
+                }
+            ],
+            activeMatch: "^/web"
+        }
     ],
-    activeMatch: '^/java',
   },
 
     {
