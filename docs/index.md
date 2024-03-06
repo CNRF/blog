@@ -23,6 +23,11 @@ features:
     details: 整理前端相关知识点<small>（面试八股文）</small><br />如有异议按你的理解为主，不接受反驳
     link: /web/html/01.HTML标签-排序标签
     linkText: 前端
+  - icon: 🌐
+    title: 实用网站
+    details: 个人收集的相关实用网站
+    link: /nav
+    linkText: 实用网站
   - icon: 💯
     title: 吾志所向，一往无前。
     details: '<small class="bottom-small">一个想躺平的小开发</small>'
