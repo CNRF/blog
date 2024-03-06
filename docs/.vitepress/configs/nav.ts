@@ -25,9 +25,14 @@ export const nav: DefaultTheme.Config['nav'] = [
             text:'前端',
             items: [
                 {
-                    text: 'html',
+                    text: 'HTML',
                     link: '/web/html/01.HTML标签-排序标签',
                     activeMatch: '^/web/html',
+                },
+                {
+                    text: 'CSS',
+                    link: '/web/css/01.CSS理论知识.md',
+                    activeMatch: '^/web/css',
                 }
             ],
             activeMatch: "^/web"
