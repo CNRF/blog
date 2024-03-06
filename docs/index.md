@@ -9,8 +9,8 @@ hero:
   actions:
     - text: java物语
       link: /java/java基础/01.基础知识
-    - text: 实用网站
-      link: /nav
+    - text: 前端宇宙
+      link: /web/css/01.CSS理论知识
       theme: alt
 features:
   - icon: 📖
