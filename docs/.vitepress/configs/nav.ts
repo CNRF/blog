@@ -33,6 +33,11 @@ export const nav: DefaultTheme.Config['nav'] = [
                     text: 'CSS',
                     link: '/web/css/01.CSS理论知识.md',
                     activeMatch: '^/web/css',
+                },
+                {
+                    text: 'JavaScript',
+                    link: '/web/javascript/01.js基本语法.md',
+                    activeMatch: '^/web/javascript',
                 }
             ],
             activeMatch: "^/web"
