@@ -26,18 +26,18 @@ export const nav: DefaultTheme.Config['nav'] = [
             items: [
                 {
                     text: 'HTML',
-                    link: '/web/html/01.HTML标签-排序标签',
-                    activeMatch: '^/web/html',
+                    link: '/web/01.html/01.HTML标签-排序标签',
+                    activeMatch: '^/web/01.html',
                 },
                 {
                     text: 'CSS',
-                    link: '/web/css/01.CSS理论知识.md',
-                    activeMatch: '^/web/css',
+                    link: '/web/02.css/01.CSS理论知识.md',
+                    activeMatch: '^/web/02.css',
                 },
                 {
                     text: 'JavaScript',
-                    link: '/web/javascript/01.js基本语法.md',
-                    activeMatch: '^/web/javascript',
+                    link: '/web/03.javascript/01.js基本语法.md',
+                    activeMatch: '^/web/03.javascript',
                 }
             ],
             activeMatch: "^/web"
