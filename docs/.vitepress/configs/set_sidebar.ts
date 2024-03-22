@@ -34,8 +34,15 @@ function getList(params: any[], path1: string, pathname: string, rootPath: strin
             if (params[file] === 'assets') {
                 continue
             }
+            const directoryArray = params[file].split('.');
+            let directoryName = "";
+            if (directoryArray.length < 2) {
+                directoryName = params[file]
+            }else {
+                directoryName= directoryArray.slice(1);
+            }
             res.push({
-                text: params[file],
+                text: directoryName,
                 collapsed: false,
                 items: getList(files, dir, `${pathname}/${params[file]}`, rootPath),
             })
