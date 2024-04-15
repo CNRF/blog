@@ -43,7 +43,7 @@ function getList(params: any[], path1: string, pathname: string, rootPath: strin
             }
             res.push({
                 text: directoryName,
-                collapsed: false,
+                collapsed: true,
                 items: getList(files, dir, `${pathname}/${params[file]}`, rootPath),
             })
         } else {

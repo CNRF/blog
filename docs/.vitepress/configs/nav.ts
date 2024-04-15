@@ -38,6 +38,11 @@ export const nav: DefaultTheme.Config['nav'] = [
                     text: 'JavaScript',
                     link: '/web/03.javascript/01.js基本语法.md',
                     activeMatch: '^/web/03.javascript',
+                },
+                {
+                    text: 'ES6',
+                    link: '/web/04.ES6/01.let和const.md',
+                    activeMatch: '^/web/04.ES6',
                 }
             ],
             activeMatch: "^/web"
