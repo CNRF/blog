@@ -10,13 +10,28 @@ export const nav: DefaultTheme.Config['nav'] = [
             items: [
                 {
                     text: 'java基础',
-                    link: '/java/java基础/01.基础知识',
-                    activeMatch: '^/java/java基础',
+                    link: '/java/01.java基础/01.基础知识',
+                    activeMatch: '^/java/01.java基础',
+                },
+                {
+                    text: '多线程和高并发',
+                    link: '/java/02.多线程和高并发/01.理论基础',
+                    activeMatch: '^/linux/05.spring',
+                },
+                {
+                    text: 'JDK集合源码',
+                    link: '/java/03.JDK集合源码/01.Collection类关系图',
+                    activeMatch: '^/linux/03.JDK集合源码',
+                },
+                {
+                    text: 'JVM',
+                    link: '/java/04.JVM/01.JVM相关知识体系详解.md',
+                    activeMatch: '^/linux/04.JVM',
                 },
                 {
                     text: 'spring',
-                    link: '/java/spring/01.源码编译',
-                    activeMatch: '^/linux/spring',
+                    link: '/java/05.spring/01.源码编译',
+                    activeMatch: '^/linux/05.spring',
                 },
             ],
             activeMatch: '^/java',
