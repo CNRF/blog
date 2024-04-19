@@ -21,6 +21,6 @@ services:
       - "3306:3306"
     # 数据卷（相关文件夹需要提前建）
     volumes:
-      - /mnt/mysql/log:/var/log/mysql
-      - /mnt/mysql/data:/var/lib/mysql
-      - /mnt/mysql/conf:/etc/mysql/conf.d
+      - /usr/mysql/log:/var/log/mysql
+      - /usr/mysql/data:/var/lib/mysql
+      - /usr/mysql/conf:/etc/mysql/conf.d

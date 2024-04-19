@@ -17,6 +17,6 @@ services:
       - "9090:9090"
     # 数据卷（相关文件夹需要提前建）
     volumes:
-      - /mnt/minio/data:/data
+      - /usr/minio/data:/data
     # 指定配置文件启动
     command:  server /data --console-address ":9090" --address ":9000"

@@ -12,7 +12,7 @@ services:
       - "6379:6379"
     # 数据卷（相关文件夹需要提前建）
     volumes:
-      - /mnt/redis/redis.conf:/etc/redis/redis.conf
-      - /mnt/redis/data:/data
+      - /usr/redis/redis.conf:/etc/redis/redis.conf
+      - /usr/redis/data:/data
     # 指定配置文件启动
     command: redis-server /etc/redis/redis.conf
