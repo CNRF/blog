@@ -78,13 +78,13 @@ export const nav: DefaultTheme.Config['nav'] = [
                 items: [
                     {
                         text: 'corn',
-                        link: '/linux/corn/01.corn安装及使用',
-                        activeMatch: '^/linux/corn',
+                        link: '/linux/01.corn/01.corn安装及使用',
+                        activeMatch: '^/linux/01.corn',
                     },
                     {
                         text: 'docker',
-                        link: '/linux/docker/01.docker安装',
-                        activeMatch: '^/linux/docker',
+                        link: '/linux/02.docker/01.docker安装',
+                        activeMatch: '^/linux/02.docker',
                     },
                 ],
                 activeMatch: '^/linux',
@@ -97,8 +97,8 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       {
         text: 'git',
-        link: '/workflow/git/01.git基本操作',
-        activeMatch: '^/workflow/git',
+        link: '/workflow/01.git/01.git基本操作',
+        activeMatch: '^/workflow/01.git',
       },
     ],
     activeMatch: '^/workflow',
