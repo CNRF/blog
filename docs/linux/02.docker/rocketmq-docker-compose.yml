@@ -1,0 +1,66 @@
+version: '3.8'
+services:
+  rmqnamesrv:
+    image: apache/rocketmq:5.1.0
+    container_name: rmqnamesrv
+    ports:
+      - 39876:9876
+    restart: no
+    privileged: true
+    volumes:
+      - E:\docker\rocketmq\nameserver\logs:/home/rocketmq/logs
+    environment:
+      #设置时区
+      - TZ=Asia/Shanghai
+      - MAX_HEAP_SIZE=256M
+      - HEAP_NEWSIZE=128M
+    command: ["sh","mqnamesrv"]
+    networks:
+      rocketmq:
+        aliases:
+          - mqnamesrv
+  broker:
+    image: apache/rocketmq:5.1.0
+    container_name: rmqbroker
+    ports:
+      - 30909:10909
+      - 30911:10911
+    restart: no
+    privileged: true
+    volumes:
+      - E:\docker\rocketmq\broker\logs:/home/rocketmq/logs
+      - E:\docker\rocketmq\broker\store:/home/rocketmq/logs
+      - E:\docker\rocketmq\broker\conf\broker.conf:/home/rocketmq/broker.conf
+    depends_on:
+      - 'rmqnamesrv'
+    environment:
+      #设置时区
+      - TZ=Asia/Shanghai
+      - NAMESRV_ADDR=rmqnamesrv:9876
+      - MAX_HEAP_SIZE=512M
+      - HEAP_NEWSIZE=256M
+    command: ["sh","mqbroker","-c","/home/rocketmq/broker.conf"]
+    networks:
+      rocketmq:
+        aliases:
+          - mqbroker
+  rmqdashboard:
+    image: apacherocketmq/rocketmq-dashboard:latest
+    container_name: rocketmq-dashboard
+    ports:
+      - 38080:8080
+    restart: no
+    privileged: true
+    depends_on:
+      - 'rmqnamesrv'
+    environment:
+      #设置时区
+      - TZ=Asia/Shanghai
+      - JAVA_OPTS= -Xmx256M -Xms256M -Xmn128M -Drocketmq.namesrv.addr=rmqnamesrv:9876 -Dcom.rocketmq.sendMessageWithVIPChannel=false
+    networks:
+      rocketmq:
+        aliases:
+          - rmqdashboard
+networks:
+  rocketmq:
+    driver: bridge

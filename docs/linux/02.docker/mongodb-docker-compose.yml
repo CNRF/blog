@@ -7,8 +7,10 @@ services:
     image: mongo:8.0-rc
     restart: no
     environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: 123456
+      #设置时区
+      - TZ=Asia/Shanghai
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=123456
     # 端口映射
     ports:
       - "37017:27017"
