@@ -1,0 +1,17 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  mongo:
+    image: mongo:8.0-rc
+    restart: no
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: 123456
+    # 端口映射
+    ports:
+      - "37017:27017"
+    # 数据卷（相关文件夹需要提前建）
+    volumes:
+      - E:\docker\mongoDB\data:/data/db
