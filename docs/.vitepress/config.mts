@@ -36,14 +36,7 @@ const config = defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     editLink: {
-      pattern: ({filePath}) => {
-        if (filePath.startsWith('packages/')) {
-          return `https://github.com/CNRF/blog/edit/master/${filePath}`
-        } else {
-          return `https://github.com/CNRF/blog/edit/master/docs/:path`
-
-        }
-      },
+      pattern: 'https://github.com/CNRF/blog/edit/master/docs/:path',
       text: '在GitHub上编辑此页',
     },
     logo: '/logo.png',
