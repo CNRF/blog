@@ -10,7 +10,7 @@ hero:
     - text: java物语
       link: /java/01.java基础/01.基础知识
     - text: 前端宇宙
-      link: /web/css/01.CSS理论知识
+      link: /web/01.html/01.HTML标签-排序标签
       theme: alt
 features:
   - icon: 📖
@@ -21,7 +21,7 @@ features:
   - icon: ✒
     title: 前端
     details: 整理前端相关知识点<small>（面试八股文）</small><br />如有异议按你的理解为主，不接受反驳
-    link: /web/html/01.HTML标签-排序标签
+    link: /web/01.html/01.HTML标签-排序标签
     linkText: 前端
   - icon: 🌐
     title: 实用网站
