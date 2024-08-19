@@ -67,6 +67,7 @@ const config = defineConfig({
       '/windows/': { base: '/windows/', items: set_sidebar('/docs/windows/') },
       '/workflow/': { base: '/workflow/', items: set_sidebar('/docs/workflow/') },
       '/web/': { base: '/web/', items: set_sidebar('/docs/web/') },
+      '/vue/': { base: '/vue/', items: set_sidebar('/docs/vue/') },
     },
     // 开启本地搜索
     search: {

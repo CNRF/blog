@@ -72,11 +72,11 @@ export const nav: DefaultTheme.Config['nav'] = [
                 items: [
                     {
                         text: '基础',
-                        link: '/vue/01.基础/MVVM模式.md',
-                        activeMatch: '^/vue/01.基础',
+                        link: '/vue/01.基础/01.MVVM模式.md',
+                        activeMatch: '^/vue/01.MVVM模式',
                     }
                 ],
-                activeMatch: "^/web"
+                activeMatch: "^/vue"
             }
         ],
         activeMatch: '^/(web|vue)',
