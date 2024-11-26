@@ -20,9 +20,9 @@ services:
       --max_allowed_packet=128M;
     # 端口映射
     ports:
-      - "33306:3306"
+      - "3306:3306"
     # 数据卷（相关文件夹需要提前建）
     volumes:
-      - E:\docker\mysql\log:/var/log/mysql
-      - E:\docker\mysql\data:/var/lib/mysql
-      - E:\docker\mysql\conf:/etc/mysql/conf.d
+      - /mnt/docker/mysql/log:/var/log/mysql
+      - /mnt/docker/mysql/data:/var/lib/mysql
+      - /mnt/docker/mysql/conf:/etc/mysql/conf.d
