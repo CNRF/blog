@@ -15,5 +15,5 @@ services:
       - "38848:8848"
     # 数据卷（相关文件夹需要提前建）
     volumes:
-      - E:\docker\nacos\custom.properties:/home/nacos/init.d/custom.properties
-      - E:\docker\nacos\logs:/home/nacos/logs
+      - /mnt/docker/nacos/custom.properties:/home/nacos/init.d/custom.properties
+      - /mnt/docker/nacos/logs:/home/nacos/logs

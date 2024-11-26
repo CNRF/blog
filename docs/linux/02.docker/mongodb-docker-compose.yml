@@ -13,7 +13,7 @@ services:
       - MONGO_INITDB_ROOT_PASSWORD=123456
     # 端口映射
     ports:
-      - "37017:27017"
+      - "27017:27017"
     # 数据卷（相关文件夹需要提前建）
     volumes:
-      - E:\docker\mongoDB\data:/data/db
+      - /mnt/docker/mongoDB/data:/data/db

@@ -11,10 +11,10 @@ services:
       - TZ=Asia/Shanghai
     # 端口映射
     ports:
-      - "36379:6379"
+      - "6379:6379"
     # 数据卷（相关文件夹需要提前建）
     volumes:
-      - E:\docker\redis\redis.conf:/etc/redis/redis.conf
-      - E:\docker\redis\data:/data
+      - /mnt/docker/redis/redis.conf:/etc/redis/redis.conf
+      - /mnt/docker/redis/data:/data
     # 指定配置文件启动
     command: redis-server /etc/redis/redis.conf

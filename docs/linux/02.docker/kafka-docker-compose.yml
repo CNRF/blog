@@ -5,6 +5,7 @@ services:
   kafka1:
     image: 'bitnami/kafka:3.5'
     container_name: kafka1
+    privileged: true
     environment:
       - KAFKA_HEAP_OPTS=-Xmx1024m -Xms1024m
       #设置时区
@@ -14,7 +15,7 @@ services:
       - KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER
       - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093
       - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
-      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:39092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9092
       - KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=1@127.0.0.1:9093
       - KAFKA_BROKER_ID=1
       - KAFKA_CFG_NODE_ID=1
@@ -22,9 +23,9 @@ services:
       - KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=1@kafka1:9093,2@kafka2:9093,3@kafka3:9093
       - ALLOW_PLAINTEXT_LISTENER=yes
     volumes:
-      - E:\docker\kafka\kafka1_data:/bitnami
+      - /mnt/docker/kafka/kafka1_data:/bitnami
     ports:
-      - "39092:9092"
+      - "9092:9092"
     networks:
       kafka:
         aliases:
@@ -33,6 +34,7 @@ services:
   kafka2:
     image: 'bitnami/kafka:3.5'
     container_name: kafka2
+    privileged: true
     environment:
       #设置时区
       - TZ=Asia/Shanghai
@@ -42,7 +44,7 @@ services:
       - KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER
       - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093
       - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
-      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:39093
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9093
       - KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=1@127.0.0.1:9093
       - KAFKA_BROKER_ID=2
       - KAFKA_CFG_NODE_ID=2
@@ -50,9 +52,9 @@ services:
       - KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=1@kafka1:9093,2@kafka2:9093,3@kafka3:9093
       - ALLOW_PLAINTEXT_LISTENER=yes
     volumes:
-      - E:\docker\kafka\kafka2_data:/bitnami
+      - /mnt/docker/kafka/kafka2_data:/bitnami
     ports:
-      - "39093:9092"
+      - "9093:9092"
     networks:
       kafka:
         aliases:
@@ -61,6 +63,7 @@ services:
   kafka3:
     image: 'bitnami/kafka:3.5'
     container_name: kafka3
+    privileged: true
     environment:
       #设置时区
       - TZ=Asia/Shanghai
@@ -70,7 +73,7 @@ services:
       - KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER
       - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093
       - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
-      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:39094
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://127.0.0.1:9094
       - KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=1@127.0.0.1:9093
       - KAFKA_BROKER_ID=3
       - KAFKA_CFG_NODE_ID=3
@@ -78,9 +81,9 @@ services:
       - KAFKA_CFG_CONTROLLER_QUORUM_VOTERS=1@kafka1:9093,2@kafka2:9093,3@kafka3:9093
       - ALLOW_PLAINTEXT_LISTENER=yes
     volumes:
-      - E:\docker\kafka\kafka3_data:/bitnami
+      - /mnt/docker/kafka/kafka3_data:/bitnami
     ports:
-      - "39094:9092"
+      - "9094:9092"
     networks:
       kafka:
         aliases:
