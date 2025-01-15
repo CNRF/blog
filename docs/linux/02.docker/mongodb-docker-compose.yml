@@ -5,7 +5,7 @@ services:
 
   mongo:
     image: mongo:8.0-rc
-    restart: no
+    restart: always
     environment:
       #设置时区
       - TZ=Asia/Shanghai
