@@ -11,7 +11,7 @@ services:
       - TZ=Asia/Shanghai
     # 端口映射
     ports:
-      - "6379:6379"
+      - "36379:6379"
     # 数据卷（相关文件夹需要提前建）
     volumes:
       - /mnt/docker/redis/redis.conf:/etc/redis/redis.conf

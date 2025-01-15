@@ -12,13 +12,13 @@ services:
       TZ: Asia/Shanghai
       MINIO_ROOT_USER: admin
       MINIO_ROOT_PASSWORD: admin123456
-      MINIO_SERVER_URL: http://127.0.0.1:9000
+      MINIO_SERVER_URL: http://127.0.0.1:39000
     # 端口映射
     ports:
-      - "9000:9000"
-      - "9090:9090"
+      - "39000:9000"
+      - "39090:9090"
     # 数据卷（相关文件夹需要提前建）
     volumes:
       - /mnt/docker/minio/data:/data
     # 指定配置文件启动
-    command: server /data --console-address ":9090" --address ":9000"
+    command: server /data --console-address ":9090" --address ":39000"

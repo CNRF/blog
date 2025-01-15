@@ -12,7 +12,7 @@ services:
       - TZ=Asia/Shanghai
     # 端口映射
     ports:
-      - "8848:8848"
+      - "38848:8848"
     # 数据卷（相关文件夹需要提前建）
     volumes:
       - /mnt/docker/nacos/custom.properties:/home/nacos/init.d/custom.properties

@@ -1,58 +1,52 @@
 version: '3.8'
 services:
-  rmqnamesrv:
-    image: apache/rocketmq:5.1.0
+  namesrv:
+    image: apache/rocketmq:5.3.1
     container_name: rmqnamesrv
     ports:
       - 9876:9876
-    restart: no
-    privileged: true
-    volumes:
-      - /mnt/docker/rocketMQ/nameserver/logs:/home/rocketmq/logs
-    environment:
-      #设置时区
-      - TZ=Asia/Shanghai
-      - MAX_HEAP_SIZE=256M
-      - HEAP_NEWSIZE=128M
-    command: ["sh","mqnamesrv"]
     networks:
-      rocketmq:
-        aliases:
-          - mqnamesrv
+      - rocketmq
+    command: sh mqnamesrv
   broker:
-    image: apache/rocketmq:5.1.0
+    image: apache/rocketmq:5.3.1
     container_name: rmqbroker
     ports:
       - 10909:10909
       - 10911:10911
-    restart: no
-    privileged: true
-    volumes:
-      - /mnt/docker/rocketMQ/broker/logs:/home/rocketmq/logs
-      - /mnt/docker/rocketMQ/broker/store:/home/rocketmq/logs
-      - /mnt/docker/rocketMQ/broker/conf/broker.conf:/home/rocketmq/broker.conf
-    depends_on:
-      - 'rmqnamesrv'
+      - 10912:10912
     environment:
-      #设置时区
-      - TZ=Asia/Shanghai
       - NAMESRV_ADDR=rmqnamesrv:9876
-      - MAX_HEAP_SIZE=512M
-      - HEAP_NEWSIZE=256M
-    command: ["sh","mqbroker","-c","/home/rocketmq/broker.conf"]
+    depends_on:
+      - namesrv
     networks:
-      rocketmq:
-        aliases:
-          - mqbroker
+      - rocketmq
+    command: sh mqbroker
+  proxy:
+    image: apache/rocketmq:5.3.1
+    container_name: rmqproxy
+    networks:
+      - rocketmq
+    depends_on:
+      - broker
+      - namesrv
+    ports:
+      - 48080:8080
+      - 48081:8081
+    restart: on-failure
+    environment:
+      - NAMESRV_ADDR=rmqnamesrv:9876
+    command: sh mqproxy
+
   rmqdashboard:
     image: apacherocketmq/rocketmq-dashboard:latest
     container_name: rocketmq-dashboard
     ports:
-      - 8080:8080
+      - 38080:8080
     restart: no
     privileged: true
     depends_on:
-      - 'rmqnamesrv'
+      - 'namesrv'
     environment:
       #设置时区
       - TZ=Asia/Shanghai
