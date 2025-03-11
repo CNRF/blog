@@ -33,6 +33,11 @@ export const nav: DefaultTheme.Config['nav'] = [
             link: '/java/05.spring/01.源码编译',
             activeMatch: '^/linux/05.spring',
           },
+          {
+            text: '面试',
+            link: '/java/99.面试/01.java基础面试题',
+            activeMatch: '^/java/99.面试',
+          },
         ],
         activeMatch: '^/java',
       },
