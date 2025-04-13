@@ -82,7 +82,18 @@ export const nav: DefaultTheme.Config['nav'] = [
     activeMatch: '^/(web|vue)',
   },
   {
-    text: '系统命令',
+    text: '数据库',
+    items: [
+      {
+        text: 'MySQL',
+        link: '/database/mysql/01.MySQL的安装与卸载.md',
+        activeMatch: '^/database/mysql/01.MySQL的安装与卸载',
+      },
+    ],
+    activeMatch: '^/database',
+  },
+  {
+    text: '系统相关',
     items: [
       {
         text: 'windows',
