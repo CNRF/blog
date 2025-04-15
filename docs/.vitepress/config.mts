@@ -70,6 +70,7 @@ const config = defineConfig({
       '/database/': { base: '/database/', items: set_sidebar('/docs/database/') },
       '/vue/': { base: '/vue/', items: set_sidebar('/docs/vue/') },
       '/designPatterns/': { base: '/designPatterns/', items: set_sidebar('/docs/designPatterns/') },
+      '/algorithm/': { base: '/algorithm/', items: set_sidebar('/docs/algorithm/') },
     },
     // 开启本地搜索
     search: {

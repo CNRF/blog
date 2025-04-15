@@ -86,11 +86,16 @@ export const nav: DefaultTheme.Config['nav'] = [
     items: [
       {
         text: 'MySQL',
-        link: '/database/mysql/01.MySQL的安装与卸载.md',
-        activeMatch: '^/database/mysql/01.MySQL的安装与卸载',
+        link: '/database/01.mysql/01.MySQL的安装与卸载.md',
+        activeMatch: '^/database/01.mysql/01.MySQL的安装与卸载',
       },
     ],
     activeMatch: '^/database',
+  },
+  {
+    text: '算法',
+    link: '/algorithm/01.冒泡排序',
+    activeMatch: '^/algorithm/',
   },
   {
     text: '系统相关',
