@@ -95,7 +95,7 @@ export const nav: DefaultTheme.Config['nav'] = [
   {
     text: '算法',
     link: '/algorithm/0001.冒泡排序',
-    activeMatch: '^/algorithm/',
+    activeMatch: '^/algorithm   /',
   },
   {
     text: '系统相关',
