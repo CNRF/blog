@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a}from"./chunks/framework.Dohe277V.js";const p=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"algorithm/00.索引.md","filePath":"algorithm/00.索引.md","lastUpdated":1744687278000}'),r={name:"algorithm/00.索引.md"};function o(s,c,n,_,i,d){return a(),e("div")}const l=t(r,[["render",o]]);export{p as __pageData,l as default};
