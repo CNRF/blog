@@ -3,6 +3,11 @@ import type { DefaultTheme } from 'vitepress'
 // @ts-ignore
 export const nav: DefaultTheme.Config['nav'] = [
   {
+    text: '面试',
+    link: '/interview/01.java基础',
+    activeMatch: '^/interview',
+  },
+  {
     text: '后端',
     items: [
       {
