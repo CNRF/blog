@@ -4,7 +4,7 @@ import type { DefaultTheme } from 'vitepress'
 export const nav: DefaultTheme.Config['nav'] = [
   {
     text: '面试',
-    link: '/interview/01.java基础',
+    link: '/interview/面试',
     activeMatch: '^/interview',
   },
   {
