@@ -12,7 +12,7 @@ services:
       TZ: Asia/Shanghai
       MINIO_ROOT_USER: admin
       MINIO_ROOT_PASSWORD: admin123456
-      MINIO_SERVER_URL: http://192.168.232.4:9000
+      MINIO_SERVER_URL: http://192.168.232.4:39000
     # 端口映射
     ports:
       - "39000:9000"
