@@ -6,6 +6,7 @@ services:
     image: 'bitnami/kafka:3.5'
     container_name: kafka1
     privileged: true
+    restart: always
     environment:
       - KAFKA_HEAP_OPTS=-Xmx1024m -Xms1024m
       #设置时区
@@ -15,7 +16,7 @@ services:
       - KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER
       - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093
       - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
-      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://172.23.214.204:9092
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://192.168.232.4:9092
       - KAFKA_BROKER_ID=1
       - KAFKA_CFG_NODE_ID=1
       - KAFKA_KRAFT_CLUSTER_ID=jkUlhzQmQkic54LMxrB1oV
@@ -33,6 +34,7 @@ services:
   kafka2:
     image: 'bitnami/kafka:3.5'
     container_name: kafka2
+    restart: always
     privileged: true
     environment:
       #设置时区
@@ -43,7 +45,7 @@ services:
       - KAFKA_CFG_CONTROLLER_LISTENER_NAMES=CONTROLLER
       - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093
       - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
-      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://172.23.214.204:9093
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://192.168.232.4:9093
       - KAFKA_BROKER_ID=2
       - KAFKA_CFG_NODE_ID=2
       - KAFKA_KRAFT_CLUSTER_ID=jkUlhzQmQkic54LMxrB1oV
@@ -62,6 +64,7 @@ services:
     image: 'bitnami/kafka:3.5'
     container_name: kafka3
     privileged: true
+    restart: always
     environment:
       #设置时区
       - TZ=Asia/Shanghai
@@ -72,7 +75,7 @@ services:
       - KAFKA_CFG_LISTENERS=PLAINTEXT://:9092,CONTROLLER://:9093
       - KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
       #设置广播地址
-      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://172.23.214.204:9094
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://192.168.232.4:9094
       - KAFKA_BROKER_ID=3
       - KAFKA_CFG_NODE_ID=3
       - KAFKA_KRAFT_CLUSTER_ID=jkUlhzQmQkic54LMxrB1oV
@@ -89,6 +92,7 @@ services:
   #kafka可视化工具
   kafka-ui:
     container_name: kafka-ui
+    restart: always
     image: provectuslabs/kafka-ui:latest
     ports:
       - 8081:8080
@@ -98,7 +102,7 @@ services:
       - kafka3
     environment:
       - KAFKA_CLUSTERS_0_NAME=kafkaCluster
-      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=172.23.214.204:9092,172.23.214.204:9093,172.23.214.204:9094
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=192.168.232.4:9092,192.168.232.4:9093,192.168.232.4:9094
       - DYNAMIC_CONFIG_ENABLED=true
     networks:
       kafka:

@@ -20,7 +20,7 @@ services:
       --max_allowed_packet=128M;
     # 端口映射
     ports:
-      - "33306:3306"
+      - "3306:3306"
     # 数据卷（相关文件夹需要提前建）
     volumes:
       - /mnt/docker/mysql/log:/var/log/mysql

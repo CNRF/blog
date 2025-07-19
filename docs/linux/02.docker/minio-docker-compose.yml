@@ -3,7 +3,7 @@ services:
   minio:
     image: minio/minio:RELEASE.2024-07-15T19-02-30Z.fips
     # docker启动时自动启动
-    restart: no
+    restart: always
     # 容器名称
     container_name: minio
     # 环境变量
@@ -12,7 +12,7 @@ services:
       TZ: Asia/Shanghai
       MINIO_ROOT_USER: admin
       MINIO_ROOT_PASSWORD: admin123456
-      MINIO_SERVER_URL: http://127.0.0.1:39000
+      MINIO_SERVER_URL: http://192.168.232.4:9000
     # 端口映射
     ports:
       - "39000:9000"
@@ -21,4 +21,4 @@ services:
     volumes:
       - /mnt/docker/minio/data:/data
     # 指定配置文件启动
-    command: server /data --console-address ":9090" --address ":39000"
+    command: server /data --console-address ":9090" --address ":9000"
