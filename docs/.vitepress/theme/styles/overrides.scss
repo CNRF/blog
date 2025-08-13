@@ -116,24 +116,3 @@ table {
   z-index: 9999 !important;
 }
 
-/* 设置中文段落自动首行缩进两个汉字宽度  并排除掉指定标签*/
-.content p:lang(zh-CN):not(.sidebar p):not(ol p):not(ul p):not(li p):not(nav p)  {
-  text-indent: 2em;  /* 缩进两个汉字宽度 */
-  line-height: 1.8;  /* 增加行距，提升阅读体验 */
-  margin: 1em 0;     /* 段落间距 */
-}
-
-
-/* 排除侧边栏文本 */
-.sidebar p {
-  text-indent: 0;     /* 侧边栏取消缩进 */
-  line-height: 1.6;   /* 保持正常行距 */
-  margin: 0;          /* 清除多余间距 */
-}
-
-/* 排除 nav 标签中的文本 */
-nav p {
-  text-indent: 0;             /* nav 中的段落不缩进 */
-  line-height: 1.6;
-  margin: 0;
-}
