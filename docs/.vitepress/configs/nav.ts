@@ -41,6 +41,17 @@ export const nav: DefaultTheme.Config['nav'] = [
         ],
         activeMatch: '^/java',
       },
+      {
+        text: 'python',
+        items: [
+          {
+            text: 'python基础',
+            link: '/python/01.python基础/01.基础类型',
+            activeMatch: '^/python/01.python基础',
+          },
+        ],
+        activeMatch: '^/python',
+      },
     ],
   },
   {

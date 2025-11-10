@@ -63,6 +63,7 @@ const config = defineConfig({
     nav,
     sidebar: {
       '/java/': { base: '/java/', items: set_sidebar('/docs/java/') },
+      '/python/': { base: '/python/', items: set_sidebar('/docs/python/') },
       '/interview/': { base: '/interview/', items: set_sidebar('/docs/interview/') },
       '/linux/': { base: '/linux/', items: set_sidebar('/docs/linux/') },
       '/windows/': { base: '/windows/', items: set_sidebar('/docs/windows/') },
