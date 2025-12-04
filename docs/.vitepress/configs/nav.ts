@@ -46,7 +46,7 @@ export const nav: DefaultTheme.Config['nav'] = [
         items: [
           {
             text: 'python基础',
-            link: '/python/01.python基础/01.基础类型',
+            link: '/python/01.python基础/01.变量',
             activeMatch: '^/python/01.python基础',
           },
         ],
