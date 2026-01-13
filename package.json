@@ -14,7 +14,7 @@
     "sitemap": "^7.1.1",
     "vitepress": "1.0.1",
     "vue": "^3.3.11",
-    "vite": "6.3.4"
+    "vite": "6.4.1"
   },
   "scripts": {
     "docs:dev": "vitepress dev docs",
